@@ -1,0 +1,1 @@
+export const serverUrl = "https://countries-nichub.up.railway.app"
