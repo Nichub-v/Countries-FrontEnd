@@ -2,7 +2,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useEffect, useState} from "react";
 import { Container } from "../../styles/HomeDetail.styled.js"
-import { serverUrl } from "../../config.js"
+import { serverIp, serverPort } from "../../config.js"
 import loading from "../../../svg/loading.svg";
 import bgImg from "../../../img/bgDetail.jpg"
 import { IoCloseCircle } from "react-icons/io5";
@@ -20,7 +20,7 @@ export default function Detail() {
     const dispatch = useDispatch()
 
     useEffect(()=> {
-        axios.get(`${serverUrl}}/countries/${id}`).then(({ data }) => {
+        axios.get(`http://${serverIp}:${serverPort}/countries/${id}`).then(({ data }) => {
         setCountry(data)
     }).catch((error) => {
         dispatch(createToast(error.response?.data?.error ?? error))

@@ -1,9 +1,9 @@
 import axios from "axios";
-import { serverUrl } from "../config.js"
+import { serverIp, serverPort } from "../config.js"
 
 export function storeCountries() {
     return (dispatch) => {
-        axios(`${serverUrl}/countries`).then(({ data })=> {
+        axios(`http://${serverIp}:${serverPort}/countries`).then(({ data })=> {
             return dispatch({
                 type: "STORE_COUNTRIES",
                 payload: data
@@ -19,7 +19,7 @@ export function storeCountries() {
 
 export function showSearchResults(name) {
     return (dispatch) => {
-        axios(`${serverUrl}/countries/?name=${name}`).then(({ data })=> {
+        axios(`http://${serverIp}:${serverPort}/countries/?name=${name}`).then(({ data })=> {
             return dispatch({
                 type: "SHOW_SEARCH_RESULTS",
                 payload: data
@@ -35,7 +35,7 @@ export function showSearchResults(name) {
 
 export function storeActivities() {
     return (dispatch) => {
-        axios(`${serverUrl}/activities`).then(({ data })=> {
+        axios(`http://${serverIp}:${serverPort}/activities`).then(({ data })=> {
             return dispatch({
                 type: "STORE_ACTIVITIES",
                 payload: data
@@ -58,7 +58,7 @@ export function filterByActivity(activityName) {
     }
 
     return (dispatch) => {
-        axios(`${serverUrl}/activity_countries/${activityName}`).then(({ data })=> {
+        axios(`http://${serverIp}:${serverPort}/activity_countries/${activityName}`).then(({ data })=> {
             return dispatch({
                 type: "FILTER_BY_ACTIVITY",
                 payload: data
