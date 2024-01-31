@@ -175,6 +175,13 @@ export const Container = styled.div`
         border-radius: 15px;
 
         box-shadow: 0px 0px 15px 7px #00000077;
+        transition: 0.2s;
+    }
+
+    .submit-btn:active {
+        transition: 0.1s;
+        box-shadow: 0px 0px 15px 7px ${({theme})=> theme.colors.text}77;
+        opacity: 0.9;
     }
 
     .grayed-out {

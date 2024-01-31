@@ -105,7 +105,7 @@ export default function HomeForm() {
             return 0
         }
 
-        axios.post(`http://${serverIp}:${serverPort}/activities`, formData).then(()=> {
+        axios.post(`${serverUrl}/activities`, formData).then(()=> {
             dispatch(createToast("Se creó la actividad correctamente"))
             dispatch(storeActivities())
         }).catch((error) => {

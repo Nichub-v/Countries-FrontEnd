@@ -101,6 +101,13 @@ export const Container = styled.div`
         margin: auto;
         margin-top: 50px;
         margin-bottom: 55px;
+        transition: 0.2s;
+    }
+
+    .submit-btn:active {
+        transition: 0.1s;
+        box-shadow: 0px 0px 15px 7px ${({theme})=> theme.colors.text}77;
+        opacity: 0.9;
     }
 
     .error-text {
