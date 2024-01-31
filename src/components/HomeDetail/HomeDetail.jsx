@@ -62,7 +62,12 @@ export default function Detail() {
                         <li>
                             <div className="li-div">
                                 <span className="li-div-title-span">Nombre nativo</span>
-                                <span className="li-div-content-span">{Object.values(country.name.nativeName)[Object.values(country.name.nativeName).length - 1].official}</span>
+                                {country.name.nativeName ? (
+                                    <span className="li-div-content-span">{Object.values(country.name.nativeName)[Object.values(country.name.nativeName).length - 1].official}</span>
+                                ) : (
+                                    <span className="li-div-content-span">No disponible</span>
+                                )}
+                                
                             </div>
                         </li>
 
@@ -86,11 +91,16 @@ export default function Detail() {
                             </div>
                             
                         </li>
-
+                        
                         <li>
                             <div className="li-div">
                                 <span className="li-div-title-span">Subregión</span>
-                                <span className="li-div-content-span">{country.subregion}</span>
+                                {country.subregion ? (
+                                    <span className="li-div-content-span">{country.subregion}</span>
+                                ) : (
+                                    <span className="li-div-content-span">No disponible</span>
+                                )}
+                                
                             </div>
                         </li>
 
