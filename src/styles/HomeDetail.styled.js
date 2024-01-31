@@ -12,6 +12,9 @@ export const Container = styled.div`
     background-color: ${({theme})=> theme.colors.bgCol};
     box-shadow: 0px 0px 20px 10px #00000025;
 
+    animation-name: show-detail;
+    animation-duration: 0.3s;
+
     .loading-container {
         
         width: 200px;
@@ -134,7 +137,7 @@ export const Container = styled.div`
 
     @keyframes show-detail {
         0% {
-            transform: translateX(45px);
+            transform: translateX(50%);
         }
 
         100% {

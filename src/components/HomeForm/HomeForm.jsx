@@ -190,6 +190,16 @@ export default function HomeForm() {
                         
                         <div>
                             
+                            <input onChange={changeHandler} type="checkbox" name="season" value="Invierno"></input>
+                            <label>Invierno</label>
+                        </div>
+
+                        <div>
+                            <input onChange={changeHandler} type="checkbox" name="season" value="Primavera"></input>
+                            <label>Primavera</label>
+                        </div>
+
+                        <div>
                             <input onChange={changeHandler} type="checkbox" name="season" value="Verano"></input>
                             <label>Verano</label>
                         </div>
@@ -197,16 +207,6 @@ export default function HomeForm() {
                         <div>
                             <input onChange={changeHandler} type="checkbox" name="season" value="Otoño"></input>
                             <label>Otoño</label>
-                        </div>
-
-                        <div>
-                            <input onChange={changeHandler} type="checkbox" name="season" value="Invierno"></input>
-                            <label>Invierno</label>
-                        </div>
-
-                        <div>
-                            <input onChange={changeHandler} type="checkbox" name="season" value="Primavera"></input>
-                            <label>Verano</label>
                         </div>
                     </div>
 

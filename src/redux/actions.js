@@ -11,7 +11,7 @@ export function storeCountries() {
         }).catch((error)=> {
             return dispatch({
                 type: "NEW_TOAST",
-                payload: error
+                payload: error.response.data.error || error
             })
         })   
     }
@@ -25,9 +25,10 @@ export function showSearchResults(name) {
                 payload: data
             })
         }).catch((error)=> {
+            
             return dispatch({
                 type: "NEW_TOAST",
-                payload: error
+                payload: error.response.data.error || error
             })
         })   
     }
@@ -66,7 +67,7 @@ export function filterByActivity(activityName) {
         }).catch((error)=> {
             return dispatch({
                 type: "NEW_TOAST",
-                payload: error
+                payload: error.response.data.error || error
             })
         })      
     }
