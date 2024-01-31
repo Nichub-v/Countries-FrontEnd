@@ -43,7 +43,6 @@ export const Container = styled.div`
         align-items: center;
         justify-content: center;
         background-color: #00000066;
-        backdrop-filter: blur(3px);
     }
 
     .weather-item {
