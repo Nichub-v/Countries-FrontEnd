@@ -13,7 +13,7 @@ export default function Landing() {
             
             <div className="text-container">
                 <h1 className="title">Bienvenido</h1>
-                <p className="subtitle">Busca países, accede a su información, crea y visualiza sus actividades turísticas.</p>
+                <p className="subtitle">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos ducimus explicabo accusamus error inventore illum in culpa iste.</p>
                 <Link to="/home"><button className="button">Acceder</button></Link>
             </div>
             
