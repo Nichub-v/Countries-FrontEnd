@@ -38,7 +38,7 @@ export default function FeedbackForm() {
         <Container>
             <div className="form-container">
             <h2 className="title">Feedback</h2>
-            <p className="subtitle">Comenta qué te pareció para ayudarme a mejorar :)<br/>Los comentarios se guardan en la base de datos.</p>
+            <p className="subtitle">Comenta qué te pareció para ayudarme a mejorar :)<br/>Los comentarios se guardan en la base de datos y son privados.</p>
 
             <form className="form">
 
