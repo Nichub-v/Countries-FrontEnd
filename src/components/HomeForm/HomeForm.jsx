@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState, useEffect } from "react"
 import { useNavigate, Link } from "react-router-dom";
-import { serverIp, serverPort } from "../../config.js"
+import { serverUrl } from "../../config.js"
 import { Container } from "../../styles/HomeForm.styled.js"
 import { validateCountries, validateDuration, validateDifficulty, validateName, validateSeasons } from "./validations.js"
 
@@ -50,7 +50,7 @@ export default function HomeForm() {
             return 0
         }
 
-        axios.get(`http://${serverIp}:${serverPort}/countries/?name=${name}`).then(({ data }) => {
+        axios.get(`${serverUrl}/countries/?name=${name}`).then(({ data }) => {
             setResults(data)
         }).catch((error) => {
             setResults([])

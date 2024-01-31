@@ -5,7 +5,7 @@ import axios from "axios"
 import { createToast } from "../../redux/actions.js"
 import { useDispatch } from "react-redux"
 import { validateName, validateMessage } from "./validations.js"
-import { serverIp, serverPort } from "../../config.js"
+import { serverUrl } from "../../config.js"
 
 export default function FeedbackForm() {
     let [formData, setFormData] = useState({name: "", message: ""})
@@ -19,7 +19,7 @@ export default function FeedbackForm() {
             return 0
         }
 
-        axios.post(`http://${serverIp}:${serverPort}/feedback`, formData).then(({data}) => {
+        axios.post(`${serverUrl}/feedback`, formData).then(({data}) => {
             dispatch(createToast(data.success))
         }).catch((error) => {
             dispatch(createToast(error.data?.error ?? error))

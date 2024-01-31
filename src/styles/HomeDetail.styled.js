@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    animation-name: show-detail;
-    animation-duration: 0.3s;
+    
     max-width: 500px;
     width: 100%;
 
@@ -14,7 +13,7 @@ export const Container = styled.div`
     box-shadow: 0px 0px 20px 10px #00000025;
 
     .loading-container {
-        position: absolute;
+        
         width: 200px;
         display: flex;
         align-items: center;
@@ -22,15 +21,12 @@ export const Container = styled.div`
         color: ${({theme})=> theme.colors.text};
         background-color: ${({theme})=> theme.colors.text}33;
         border-radius: 12px;
-
+        
+        margin: auto;
         margin-top: 150px;
-        margin-left: auto;
-        margin-right: auto;
-        left: 0;
-        right: 0;
 
         animation-name: show-loading;
-        animation-duration: 0.1s;
+        animation-duration: 0.2s;
     }
 
     .loading-container-item {

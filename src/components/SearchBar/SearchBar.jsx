@@ -2,7 +2,7 @@ import { Container } from "../../styles/SearchBar.styled.js";
 import { Link } from "react-router-dom"
 import { useRef, useState, useEffect } from "react"
 import axios from "axios"
-import { serverIp, serverPort } from "../../config.js"
+import { serverUrl } from "../../config.js"
 import { useDispatch } from "react-redux";
 import { showSearchResults } from "../../redux/actions.js";
 
@@ -48,7 +48,7 @@ export default function SearchBar(props) {
             return 0
         }
         
-        axios.get(`http://${serverIp}:${serverPort}/countries/?name=${name}&&limit=12`).then(({ data }) => {
+        axios.get(`${serverUrl}/countries/?name=${name}&&limit=12`).then(({ data }) => {
             setResults(data)
             setUnmountResults(false);
             setShowingResults(true)
