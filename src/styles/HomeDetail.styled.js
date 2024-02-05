@@ -5,6 +5,8 @@ export const Container = styled.div`
     max-width: 500px;
     width: 100%;
 
+    position: fixed;
+    height: 100vh;
     
     right: 0;
     z-index: 3;
@@ -24,6 +26,7 @@ export const Container = styled.div`
         color: ${({theme})=> theme.colors.text};
         background-color: ${({theme})=> theme.colors.text}33;
         border-radius: 12px;
+        
         
         margin: auto;
         margin-top: 150px;
@@ -157,12 +160,6 @@ export const Container = styled.div`
         }
     }
 
-    @media screen and (max-width: 680px) {
-	    position: fixed;
-        height: 100vh;
-
-        
-    } 
 
     @media screen and (max-width: 500px) {
         @keyframes show-detail {

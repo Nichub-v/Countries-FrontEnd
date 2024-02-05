@@ -18,8 +18,9 @@ export default function Detail() {
     const [country, setCountry] = useState({})
     const navigate = useNavigate()
     const dispatch = useDispatch()
-
+    
     useEffect(()=> {
+        setCountry({})
         axios.get(`${serverUrl}/countries/${id}`).then(({ data }) => {
         setCountry(data)
     }).catch((error) => {

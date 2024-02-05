@@ -12,9 +12,12 @@ export const Container = styled.div`
     box-shadow: 0px 0px 20px 10px #00000025;
     
     animation-name: show-form;
-    animation-duration: 0.2s;
+    animation-duration: 0.3s;
     color: ${({theme})=> theme.colors.text};
     transition: 0.2s;
+
+    position: fixed;
+    height: 100vh;
 
     * {
         transition: 0.2s;
@@ -234,7 +237,7 @@ export const Container = styled.div`
 
     @keyframes show-form {
         0% {
-            transform: translateX(45px);
+            transform: translateX(50%);
         }
 
         100% {
@@ -243,7 +246,21 @@ export const Container = styled.div`
         }
     }
 
-    @media screen and (max-width: 680px) {
+    @media screen and (max-width: 500px) {
+        @keyframes show-form {
+            0% {
+                opacity: 0;
+                transform: translateY(45px);
+            }
+
+            100% {
+                
+                transform: translateY(0px);
+            }
+        }    
+    } 
+
+    @media screen and (max-width: 1000px) {
 	    position: fixed;
         height: 100vh;
     } 
