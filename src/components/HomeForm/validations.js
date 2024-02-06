@@ -13,6 +13,10 @@ function validateName(data) {
         return "Debe tener 3 o más caracteres"
     }
 
+    if (data.trim().length !== data.length) {
+        return "No puede tener espacios al inicio o al final"
+    }
+
 	return ""
 }
 
@@ -28,9 +32,8 @@ function validateDifficulty(data) {
 }
 
 function validateDuration(data) {
-    if (data === "") return "Debes indicar una duración"
-
-    if (typeof(Number(data)) !== "number") return "Valor inválido"
+    console.log("data: " + data)
+    if (data === "") return "Debes indicar una duración válida"
 
     if (data < 0) return "No puede ser negativo"
 
