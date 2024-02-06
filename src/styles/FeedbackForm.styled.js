@@ -14,6 +14,7 @@ export const Container = styled.div`
 
 
     color: ${({theme}) => theme.colors.text};
+    transition: 0.2s;
 
     .form-container {
         position: sticky;
@@ -41,6 +42,7 @@ export const Container = styled.div`
 
     a {
         color: ${({theme})=> theme.colors.text};
+        transition: 0.2s;
     }
 
     .form-item {
@@ -54,6 +56,7 @@ export const Container = styled.div`
         overflow: hidden;
         background-color: ${({theme})=> theme.colors.darkerBgCol};
         border: 1px solid ${({theme})=> theme.colors.text};
+        transition: 0.2s;
     }
 
     .label-title {
@@ -62,6 +65,7 @@ export const Container = styled.div`
         align-items: center;
         background-color: ${({theme})=> theme.colors.text};
         color: ${({theme})=> theme.colors.bgCol};
+        transition: 0.2s;
         height: 30px;
     }
 
@@ -75,10 +79,12 @@ export const Container = styled.div`
         background-color: ${({theme})=> theme.colors.darkerBgCol};
         padding: 5px 10px;
         font-size: 17px;
+
+        transition: 0.2s;
     }
 
     .form-item textarea {
-        height: 300px;
+        height: 200px;
         font-family: sans-serif;
         padding-bottom: 20px;
         resize: none;
@@ -102,17 +108,23 @@ export const Container = styled.div`
         margin-top: 50px;
         margin-bottom: 55px;
         transition: 0.2s;
+
+        transition: 0.2s;
     }
 
     .submit-btn:active {
         transition: 0.1s;
         box-shadow: 0px 0px 15px 7px ${({theme})=> theme.colors.text}77;
         opacity: 0.9;
+
+        
     }
 
     .error-text {
         color: ${({theme})=> theme.colors.text};
         transform: translateY(-15px);
+
+        transition: 0.2s;
     }
 
     .form label {

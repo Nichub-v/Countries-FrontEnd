@@ -17,6 +17,8 @@ export const Container = styled.div`
     animation-name: show-detail;
     animation-duration: 0.3s;
 
+    transition: 0.2s;
+
     .loading-container {
         
         width: 200px;

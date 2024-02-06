@@ -26,22 +26,22 @@ export default function Card(props) {
     return (
         <Link className="title" to={`/home/country/${props.id}`}>
             <Container flagUrl={props.flag}>
-            <div className="info-container">
-                <ul className="info-ul">
-                {weatherData.condition ? (
-                        <li className="weather-container">
-                            <span className="weather-span weather-item">{weatherData.condition.text}</span>
-                            <img className="weather-img weather-item" src={weatherData.condition.icon}></img>
-                        </li>
-                    ) : (
-                        <li className="weather-container"><span className="weather-span weather-item">No hay información climática.</span></li>
-                    )}
+                <div className="info-container">
+                    <ul className="info-ul">
+                    {weatherData.condition ? (
+                            <li className="weather-container">
+                                <span className="weather-span weather-item">{weatherData.condition.text}</span>
+                                <img className="weather-img weather-item" src={weatherData.condition.icon}></img>
+                            </li>
+                        ) : (
+                            <li className="weather-container"><span className="weather-span weather-item">No hay información climática.</span></li>
+                        )}
 
-                    <li><h3>{props.name}</h3></li>
-                    <li>{props.continents[0]}</li>
-                </ul>
-            </div>
-        </Container>
+                        <li><h3>{props.name}</h3></li>
+                        <li>{props.continents[0]}</li>
+                    </ul>
+                </div>
+            </Container>
         </Link>
         
     )
