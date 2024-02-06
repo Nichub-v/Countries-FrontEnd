@@ -93,9 +93,22 @@ export const Container = styled.div`
         display: grid;
         grid-auto-flow: column;
 
-        overflow: auto;
         max-width: 850px;
         align-items: center;
+        overflow: auto;
+
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .page-buttons-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .page-buttons-container:hover,
+    .page-buttons-container:active,
+    .page-buttons-container:focus {
+        scrollbar-width: thin;
     }
 
     .pages-container button {

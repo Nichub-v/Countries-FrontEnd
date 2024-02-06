@@ -25,6 +25,10 @@ const GlobalStyles = createGlobalStyle`
         cursor: pointer;
     }
 
+    body {
+        scroll-behavior: smooth;
+    }
+
 
 `
 
