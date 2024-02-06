@@ -36,8 +36,7 @@ export const Container = styled.div`
         right: 0;
         max-width: 470px;
         width: 100%;
-        margin: auto;
-        
+        margin: auto;        
     }
 
     .results-sub-container {

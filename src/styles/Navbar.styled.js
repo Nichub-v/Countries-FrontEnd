@@ -105,6 +105,7 @@ export const Container = styled.header`
         height: 45px;
         width: 45px;
         padding: 5px;
+        filter: grayscale(30%)
     }
 
     .title {

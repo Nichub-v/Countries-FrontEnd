@@ -44,6 +44,7 @@ export const Container = styled.div`
         justify-content: center;
         background-color: #00000066;
         color: white;
+        display: none;
     }
 
     .weather-item {

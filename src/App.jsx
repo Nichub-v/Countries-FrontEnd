@@ -29,12 +29,12 @@ function App() {
 
   const darkTheme = {
     colors: {
-      accent: "#5d9eff",
-      accentPale: "#b6d3ff",
-      text: "#e0eeff",
-      lighterBgCol: "#474747",
-      bgCol: "#353535",
-      darkerBgCol:"#252525",
+      accent: "#5db6ff",
+      accentPale: "#b6deff",
+      text: "#e0f1ff",
+      lighterBgCol: "#30414d",
+      bgCol: "#1e2c35",
+      darkerBgCol:"#191f25",
       cardBg: "#000000",
     }
   }
@@ -42,8 +42,8 @@ function App() {
   const lightTheme = {
     colors: {
       accent: "#5d9eff",
-      accentPale: "#b6d3ff",
-      text: "#02112c",
+      accentPale: "#b6d6ff",
+      text: "#02182c",
       lighterBgCol: "#ffffff",
       bgCol: "#ffffff",
       darkerBgCol:"#e6e6e6",
