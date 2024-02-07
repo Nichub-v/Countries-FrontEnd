@@ -1,6 +1,11 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyles = createGlobalStyle`
+    * {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+    }
+
     a {
         text-decoration: none;
         color: white;
@@ -29,7 +34,15 @@ const GlobalStyles = createGlobalStyle`
         scroll-behavior: smooth;
     }
 
+    *::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
 
+    *::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 5px;
+    }
 `
 
 export default GlobalStyles;
