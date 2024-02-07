@@ -3,7 +3,7 @@ import { createGlobalStyle } from "styled-components";
 const GlobalStyles = createGlobalStyle`
     * {
         scrollbar-width: thin;
-        scrollbar-color: rgba(0, 0, 0, 0.2) transparent;
+        scrollbar-color: ${({theme}) => theme.colors.accentPale}55 ${({theme}) => theme.colors.lighterBgCol};
     }
 
     a {
